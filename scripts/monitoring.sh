@@ -14,10 +14,14 @@ sudo systemctl start cockpit.socket
 
 echo "[Monitoring] Installing Tailscale..."
 
-curl -fsSL https://tailscale.com/install.sh | sh
+if ! command -v tailscale >/dev/null 2>&1; then
+    curl -fsSL https://tailscale.com/install.sh | sh
 
-sudo systemctl enable tailscaled
-sudo systemctl start tailscaled
+    sudo systemctl enable tailscaled
+    sudo systemctl start tailscaled
+else
+    echo "[Monitoring] Tailscale is already installed"
+fi
 
 echo ""
 echo "Cockpit Web UI:"
