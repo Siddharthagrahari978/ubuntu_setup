@@ -2,8 +2,17 @@
 set -e
 
 echo "[Gaming] Installing Steam..."
+sudo dpkg --add-architecture i386
 
-sudo apt install -y steam-installer gamemode mangohud
+sudo apt update
+
+sudo apt install -y \
+    libc6:i386 \
+    libgl1:i386 \
+    libgl1-mesa-dri:i386 \
+    steam \
+    gamemode \
+    mangohud
 
 echo "[Gaming] Installing Heroic..."
 

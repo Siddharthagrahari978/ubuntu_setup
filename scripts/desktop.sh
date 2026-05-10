@@ -19,7 +19,8 @@ sudo apt install -y \
 
 echo "[Desktop] Installing LocalSend + Spotify..."
 
-flatpak install -y flathub org.localsend.localsend
+flatpak update
+flatpak install -y flathub org.localsend.localsend_app
 flatpak install -y flathub com.spotify.Client
 
 echo "[Desktop] Recommended Extensions:"

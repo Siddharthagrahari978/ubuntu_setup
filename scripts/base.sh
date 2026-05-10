@@ -14,7 +14,7 @@ sudo apt install -y \
     flatpak gnome-software-plugin-flatpak \
     python3 python3-pip python3-venv \
     htop btop fastfetch fzf ripgrep bat fd-find \
-    zoxide neofetch ubuntu-restricted-extras
+    zoxide ubuntu-restricted-extras
 
 echo "[Base] Adding Flathub..."
 
